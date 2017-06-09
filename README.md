@@ -1,14 +1,15 @@
-# json2xlsx-export
+# json2xlsx
 _Lightweight in browser `.xlsx` exporter._
 
 ### How it use
 
 ```sh
-import json2xlsx-export from 'json2xlsx-export';
+import json2xlsx from 'json2xlsx';
 
-const config = {
+let xlsx = {
   filename: 'AwesomeFile',
-  sheet: {
+  sheets: [{
+    name:"First sheet",
     data: [
       [{
         value: 'Line1',
@@ -21,8 +22,20 @@ const config = {
         type: 'number'
       }]
     ]
-  }
+  },
+  {
+    name:"Second sheet",
+    data: [
+      [{
+        value: 'First',
+        type: 'string'
+      },{
+        value: 'Second',
+        type: 'string'
+      }]
+    ]
+  }]
 };
 
-json2xlsx-export(config);
+json2xlsx(xlsx);
 ```
