@@ -1,5 +1,5 @@
 {
-  "name": "json2xlsx",
+  "name": "json2xlsxexport",
   "version": "1.0.1",
   "description": "JSON Transformer to create .xlsx files",
   "main": "lib/json2xlsx.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bgrusnak/json2xlsx.git"
+    "url": "git+ssh://git@github.com/bgrusnak/json2xlsxexport.git"
   },
   "keywords": [
     "JSON",
@@ -29,9 +29,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bgrusnak/json2xlsx/issues"
+    "url": "https://github.com/bgrusnak/json2xlsxexport/issues"
   },
-  "homepage": "https://github.com/bgrusnak/json2xlsx#readme",
+  "homepage": "https://github.com/bgrusnak/json2xlsxexport#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",

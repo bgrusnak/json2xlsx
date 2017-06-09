@@ -16,22 +16,23 @@ export const generateXMLWorksheet = (rows) => {
 };
 
 export default (config) => {
-  if (!validator(config)) {
-    return;
-  }
+	if (!validator(config)) {
+		return;
+	}
 
-  const zip = new JSZip();
-  const xl = zip.folder('xl');
-  xl.file('workbook.xml', workbookXML);
-  xl.file('_rels/workbook.xml.rels', workbookXMLRels);
-  zip.file('_rels/.rels', rels);
-  zip.file('[Content_Types].xml', contentTypes);
+	const zip = new JSZip();
+	const xl = zip.folder('xl');
+	xl.file('workbook.xml', workbookXML);
+	xl.file('_rels/workbook.xml.rels', workbookXMLRels);
+	zip.file('_rels/.rels', rels);
+	zip.file('[Content_Types].xml', contentTypes);
+	config.sheets.map(sheet => { 
+		let worksheet = generateXMLWorksheet(sheet.data); 
+		xl.file('worksheets/'+sheet.name+'.xml', worksheet);
+	})
 
-  const worksheet = generateXMLWorksheet(config.sheet.data);
-  xl.file('worksheets/sheet1.xml', worksheet);
-
-  zip.generateAsync({ type: 'blob' })
-    .then((blob) => {
-      FileSaver.saveAs(blob, `${config.filename}.xlsx`);
-    });
+	zip.generateAsync({ type: 'blob' })
+	.then((blob) => {
+		FileSaver.saveAs(blob, `${config.filename}.xlsx`);
+	});
 };

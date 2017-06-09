@@ -1,10 +1,10 @@
-# json2xlsx
+# json2xlsxexport
 _Lightweight in browser `.xlsx` exporter._
 
 ### How it use
 
 ```sh
-import json2xlsx from 'json2xlsx';
+import json2xlsx from 'json2xlsxexport';
 
 let xlsx = {
   filename: 'AwesomeFile',
