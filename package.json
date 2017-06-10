@@ -105,5 +105,5 @@
     "test": "jest",
     "test:dev": "jest --watch"
   },
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
