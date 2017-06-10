@@ -1,37 +1,61 @@
 {
-  "name": "json2xlsxexport",
-  "version": "1.0.2",
-  "description": "JSON Transformer to create .xlsx files",
-  "main": "lib/json2xlsx.js",
-  "scripts": {
-    "test": "jest",
-    "test:dev": "jest --watch",
-    "lint": "eslint . ./",
-    "build": "jest && eslint . ./ && babel ./src -d lib"
-  },
-  "jest": {
-    "verbose": true,
-    "transform": {
-      ".js": "./node_modules/babel-jest"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/bgrusnak/json2xlsxexport.git"
-  },
-  "keywords": [
-    "JSON",
-    "Excel",
-    "xlsx"
+  "_args": [
+    [
+      {
+        "raw": "json2xlsxexport@^1.0.1",
+        "scope": null,
+        "escapedName": "json2xlsxexport",
+        "name": "json2xlsxexport",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\Rusnak\\Projects\\Loqus\\openfleet-ui"
+    ]
   ],
-  "author": [
-    "Ilya Shlyakhovoy"
+  "_from": "json2xlsxexport@>=1.0.1 <2.0.0",
+  "_id": "json2xlsxexport@1.0.2",
+  "_inCache": true,
+  "_location": "/json2xlsxexport",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/json2xlsxexport-1.0.2.tgz_1497039460712_0.7733866139315069"
+  },
+  "_npmUser": {
+    "name": "bgrusnak",
+    "email": "bulgarus@inbox.ru"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "json2xlsxexport@^1.0.1",
+    "scope": null,
+    "escapedName": "json2xlsxexport",
+    "name": "json2xlsxexport",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
-  "license": "MIT",
+  "_resolved": "https://registry.npmjs.org/json2xlsxexport/-/json2xlsxexport-1.0.2.tgz",
+  "_shasum": "71fa8c5aae6e632469d9a6b3a2717870792bad19",
+  "_shrinkwrap": null,
+  "_spec": "json2xlsxexport@^1.0.1",
+  "_where": "C:\\Users\\Rusnak\\Projects\\Loqus\\openfleet-ui",
+  "author": "",
   "bugs": {
     "url": "https://github.com/bgrusnak/json2xlsxexport/issues"
   },
-  "homepage": "https://github.com/bgrusnak/json2xlsxexport#readme",
+  "dependencies": {
+    "file-saver": "^1.3.3",
+    "jszip": "^3.1.3",
+    "lodash.escape": "^4.0.1"
+  },
+  "description": "JSON Transformer to create .xlsx files",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
@@ -42,9 +66,44 @@
     "eslint-plugin-import": "^2.2.0",
     "jest": "^19.0.1"
   },
-  "dependencies": {
-    "file-saver": "^1.3.3",
-    "jszip": "^3.1.3",
-    "lodash.escape": "^4.0.1"
-  }
+  "directories": {},
+  "dist": {
+    "shasum": "71fa8c5aae6e632469d9a6b3a2717870792bad19",
+    "tarball": "https://registry.npmjs.org/json2xlsxexport/-/json2xlsxexport-1.0.2.tgz"
+  },
+  "gitHead": "c1b92b894e4a175acb7dd8e6a3334e14878b2c8c",
+  "homepage": "https://github.com/bgrusnak/json2xlsxexport#readme",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      ".js": "./node_modules/babel-jest"
+    }
+  },
+  "keywords": [
+    "JSON",
+    "Excel",
+    "xlsx"
+  ],
+  "license": "MIT",
+  "main": "src/json2xlsx.js",
+  "maintainers": [
+    {
+      "name": "bgrusnak",
+      "email": "bulgarus@inbox.ru"
+    }
+  ],
+  "name": "json2xlsxexport",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bgrusnak/json2xlsxexport.git"
+  },
+  "scripts": {
+    "build": "jest && eslint . ./ && babel ./src -d lib",
+    "lint": "eslint . ./",
+    "test": "jest",
+    "test:dev": "jest --watch"
+  },
+  "version": "1.0.2"
 }

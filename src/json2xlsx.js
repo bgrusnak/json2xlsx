@@ -4,10 +4,10 @@ import FileSaver from 'file-saver';
 import validator from './validator';
 import generatorRows from './formatters/rows/generatorRows';
 
-import workbookXML from './statics/workbook.xml';
-import workbookXMLRels from './statics/workbook.xml.rels';
+import workbookXML from './workbook';
+import workbookXMLRels from './relationships';
 import rels from './statics/rels';
-import contentTypes from './statics/[Content_Types].xml';
+import contentTypes from './contentTypes';
 import templateSheet from './templates/worksheet.xml';
 
 export const generateXMLWorksheet = (rows) => {
@@ -22,13 +22,13 @@ export default (config) => {
 
 	const zip = new JSZip();
 	const xl = zip.folder('xl');
-	xl.file('workbook.xml', workbookXML);
-	xl.file('_rels/workbook.xml.rels', workbookXMLRels);
+	xl.file('workbook.xml', workbookXML(config.sheets));
+	xl.file('_rels/workbook.xml.rels', workbookXMLRels(config.sheets.length));
 	zip.file('_rels/.rels', rels);
-	zip.file('[Content_Types].xml', contentTypes);
-	config.sheets.map(sheet => { 
-		let worksheet = generateXMLWorksheet(sheet.data); 
-		xl.file('worksheets/'+sheet.name+'.xml', worksheet);
+	zip.file('[Content_Types].xml', contentTypes(config.sheets.length));
+	config.sheets.map((sheet, i) => { 
+		let worksheet = generateXMLWorksheet(sheet); 
+		xl.file('worksheets/'+i+'.xml', worksheet);
 	})
 
 	zip.generateAsync({ type: 'blob' })
