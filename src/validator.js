@@ -12,18 +12,22 @@ const childValidator = (array) => {
 export default (config) => {
   if (!config.filename) {
     console.error(MISSING_KEY_FILENAME);
-    return false;
+    return {
+      error: MISSING_KEY_FILENAME
+    };
   }
 
   if (typeof config.filename !== 'string') {
     console.error(INVALID_TYPE_FILENAME);
-    return false;
+    return {
+      error: INVALID_TYPE_FILENAME
+    };
   }
-/*
-  if (!Array.isArray(config.sheets)) {
-    console.error(INVALID_TYPE_SHEET);
-    return false;
-  }
-*/
+  /*
+    if (!Array.isArray(config.sheets)) {
+      console.error(INVALID_TYPE_SHEET);
+      return false;
+    }
+  */
   return true;
 };

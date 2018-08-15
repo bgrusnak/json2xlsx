@@ -1,27 +1,9 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "json2xlsxexport@^1.0.1",
-        "scope": null,
-        "escapedName": "json2xlsxexport",
-        "name": "json2xlsxexport",
-        "rawSpec": "^1.0.1",
-        "spec": ">=1.0.1 <2.0.0",
-        "type": "range"
-      },
-      "C:\\Users\\Rusnak\\Projects\\Loqus\\openfleet-ui"
-    ]
-  ],
-  "_from": "json2xlsxexport@>=1.0.1 <2.0.0",
-  "_id": "json2xlsxexport@1.0.2",
+  "_from": "json2xlsxexport@>=1.2.5 <2.0.0",
+  "_id": "json2xlsxexport@1.2.5",
   "_inCache": true,
   "_location": "/json2xlsxexport",
   "_nodeVersion": "7.10.0",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/json2xlsxexport-1.0.2.tgz_1497039460712_0.7733866139315069"
-  },
   "_npmUser": {
     "name": "bgrusnak",
     "email": "bulgarus@inbox.ru"
@@ -29,12 +11,12 @@
   "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "json2xlsxexport@^1.0.1",
+    "raw": "json2xlsxexport@^1.2.5",
     "scope": null,
     "escapedName": "json2xlsxexport",
     "name": "json2xlsxexport",
-    "rawSpec": "^1.0.1",
-    "spec": ">=1.0.1 <2.0.0",
+    "rawSpec": "^1.2.5",
+    "spec": ">=1.2.5 <2.0.0",
     "type": "range"
   },
   "_requiredBy": [
@@ -44,9 +26,8 @@
   "_resolved": "https://registry.npmjs.org/json2xlsxexport/-/json2xlsxexport-1.0.2.tgz",
   "_shasum": "71fa8c5aae6e632469d9a6b3a2717870792bad19",
   "_shrinkwrap": null,
-  "_spec": "json2xlsxexport@^1.0.1",
-  "_where": "C:\\Users\\Rusnak\\Projects\\Loqus\\openfleet-ui",
-  "author": "",
+  "_spec": "json2xlsxexport@^1.2.5",
+    "author": "",
   "bugs": {
     "url": "https://github.com/bgrusnak/json2xlsxexport/issues"
   },

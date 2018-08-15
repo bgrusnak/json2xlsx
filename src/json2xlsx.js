@@ -9,16 +9,17 @@ import workbookXMLRels from './relationships';
 
 import rels from './statics/rels';
 import contentTypes from './contentTypes';
-import templateSheet from  './templates/worksheet.xml'
+import templateSheet from './templates/worksheet.xml'
 
 export const generateXMLWorksheet = (rows) => {
-  const XMLRows = generatorRows(rows);
-  return templateSheet.replace('{placeholder}', XMLRows);
+	const XMLRows = generatorRows(rows);
+	return templateSheet.replace('{placeholder}', XMLRows);
 };
 
 export default (config) => {
-	if (!validator(config)) {
-		return;
+	const valid = validator(config)
+	if (valid !== true) {
+		throw valid;
 	}
 
 	const zip = new JSZip();
@@ -31,18 +32,20 @@ export default (config) => {
 	zip.file('[Content_Types].xml', contentTypes(config.sheets.length));
 
 
-	config.sheets.map((sheet, i) => { 
-		let worksheet = generateXMLWorksheet(sheet.data); 
-		xl.file('worksheets/sheet'+(i+1)+'.xml', worksheet);
+	config.sheets.map((sheet, i) => {
+		let worksheet = generateXMLWorksheet(sheet.data);
+		xl.file('worksheets/sheet' + (i + 1) + '.xml', worksheet);
 	})
-/*
-		let worksheet = generateXMLWorksheet(config.data); 
-		xl.file('worksheets/sheet1.xml', worksheet);
+	/*
+			let worksheet = generateXMLWorksheet(config.data); 
+			xl.file('worksheets/sheet1.xml', worksheet);
 
-*/
+	*/
 
-	zip.generateAsync({ type: 'blob' })
-	.then((blob) => {
-		FileSaver.saveAs(blob, `${config.filename}.xlsx`);
-	});
+	zip.generateAsync({
+			type: 'blob'
+		})
+		.then((blob) => {
+			FileSaver.saveAs(blob, `${config.filename}.xlsx`);
+		});
 };
