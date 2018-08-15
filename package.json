@@ -27,7 +27,7 @@
   "_shasum": "71fa8c5aae6e632469d9a6b3a2717870792bad19",
   "_shrinkwrap": null,
   "_spec": "json2xlsxexport@^1.2.5",
-    "author": "",
+  "author": "",
   "bugs": {
     "url": "https://github.com/bgrusnak/json2xlsxexport/issues"
   },
@@ -85,5 +85,5 @@
     "test": "jest",
     "test:dev": "jest --watch"
   },
-  "version": "1.2.4"
+  "version": "1.2.5"
 }
